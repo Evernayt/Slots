@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1084935728789",
+    "project_id": "delta-soft-test-99b27",
+    "storage_bucket": "delta-soft-test-99b27.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1084935728789:android:98182d7629275039f5359c",
+        "android_client_info": {
+          "package_name": "com.slots"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1084935728789-ip0qvso44urgblcsciq546h524netrks.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-wFASmf9pQiU98BKJAlV8W3pSP-D-8Z4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1084935728789-ip0qvso44urgblcsciq546h524netrks.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
