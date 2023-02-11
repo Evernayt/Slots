@@ -32,9 +32,9 @@ const Slots = () => {
   const [isStart, setIsStart] = useState<boolean>(true);
   const [defeatCount, setDefeatCount] = useState<number>(0);
 
+  const lastBetRef = useRef<number>(bet);
   const spinStartRef = useRef(new Sound('spin_start.wav', Sound.MAIN_BUNDLE));
   const spinRef = useRef(new Sound('spin.mp3', Sound.MAIN_BUNDLE));
-
   const wonRef = useRef(new Sound('won.wav', Sound.MAIN_BUNDLE));
 
   useEffect(() => {
@@ -62,7 +62,9 @@ const Slots = () => {
 
   const spin = () => {
     setIsStart(false);
+    lastBetRef.current = bet;
     setNumDuration(0.5);
+
     spinStartRef.current.play();
     spinRef.current.play();
 
@@ -92,7 +94,7 @@ const Slots = () => {
     setSpinDisabled(false);
 
     if (checkWin()) {
-      const wonCoins = bet * 15;
+      const wonCoins = lastBetRef.current * 15;
       try {
         AsyncStorage.setItem(COINS_KEY, (coins + wonCoins).toString());
       } catch {}
